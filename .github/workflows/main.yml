@@ -4,12 +4,11 @@ on:
     
 jobs:
   build_and_push:
-    name: Build and push Docker
+    name: Build Docker
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
-      - name: Build and push Docker image
+      - name: Build Docker image
         run: |
-            docker build -t nanajanashia/k8s-demo-app:v1.0 .
-            docker push nanajanashia/k8s-demo-app:v1.0
+            docker build -t nanajanashia/k8s-demo-app:v1.0
